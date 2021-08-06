@@ -16,3 +16,10 @@ class Product(Base):
     product_quantity = Column('Quantity', Integer)
     product_price = Column('Price', Integer)
     date_updated = Column('Date Updated', Date)
+
+    def __repr__(self):
+        return f"""ID: {self.product_id}
+                   \rProduct name: {self.product_name}
+                   \rQuantity: {self.product_quantity}
+                   \rPrice in cents: {self.product_price}
+                   \rDate updated: {self.date_updated}"""

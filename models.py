@@ -18,8 +18,9 @@ class Product(Base):
     date_updated = Column('Date Updated', Date)
 
     def __repr__(self):
+        price = self.product_price/100
         return f"""ID: {self.product_id}
                    \rProduct name: {self.product_name}
                    \rQuantity: {self.product_quantity}
-                   \rPrice in cents: {self.product_price}
+                   \rPrice: ${price}
                    \rDate updated: {self.date_updated}"""
